@@ -11,12 +11,12 @@
 <body>
     <section>
         <img class='my-face' src="images/green.jpg" alt="Specs pass">
-        <main>
+        <div class='about'>
             <h1>Simon DeBevoise</h1>
             <p>Currently building a pedal steel guitar with Pure Data on a Raspberry Pi.</p>
             <p>Find me biking in NYC and the Smoky Mountains, jamming in Bushwick warehouses, learning actual pedal steel guitar.</p>
             <p>Software engineer at Bloomberg LP and design geek.</p>
-        </main>
+        </div>
     </section>
     <header class='nav-menu'>
         <nav>
@@ -40,42 +40,45 @@
             </ul>
         </div>
     </header>
-    <section id='projects' class='slides' >
+    <main id='projects'>
         <h1>projects</h1>
-        <div class="project">
-            <header>
-                <h3>TILDA</h3>
-                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
-            </header>
-            <img src="images/tilda.png" alt="TILDA, a fullstack clone of Spotify">
-            <p>
-                Tilda is an online music streaming platform modeled after Spotify.  
-            </p>
-            <p>Users can search for new music, add songs, artists, and albums to their libraries, and create and edit playlists, all while enjoying uninterrupted audio playback.</p>
-                
-                <p>Tilda is built with a Ruby on Rails and PostgreSQL backend and uses React/Redux to deliver a dynamic frontend user experience.</p> 
-        </div>
-        <div class="project">
-            <header>
-                <h3>Splat</h3>
-                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
-            </header>
-            <img src="images/splat.png" alt="splat drum sequencer">
-        </div>
-        <div class="project">
-            <header>
-                <h3>Spellcaster</h3>
-                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
-            </header>
-            <img src="images/spellcaster.png" alt="spellcaster">
-        </div>
-        <div class="project">
-            <header>
-                <h3>Portefeuille</h3>
-                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
-            </header>
-            <a href="images/portefeuille.png" alt='portefeuille'></a>
-        </div>
-    </section>
+        <section class='slides' >
+            
+            <div class="project">
+                <header>
+                    <h3 class='title pink'>Tilda</h3>
+                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                </header>
+                <img src="images/tilda.png" alt="TILDA, a fullstack clone of Spotify">
+                <p>
+                    Tilda is an online music streaming platform modeled after Spotify.  
+                </p>
+                <p>Users can search for new music, add songs, artists, and albums to their libraries, and create and edit playlists, all while enjoying uninterrupted audio playback.</p>
+                    
+                    <p>Tilda is built with a Ruby on Rails and PostgreSQL backend and uses React/Redux to deliver a dynamic frontend user experience.</p> 
+            </div>
+            <div class="project">
+                <header>
+                    <h3 class='title pink'>Splat</h3>
+                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                </header>
+                <img src="images/splat.png" alt="splat drum sequencer">
+                <p>Splat is an interactive, easy-to-use audio sampler and sequencer. Users can create beats by simply pressing keys or clicking. </p><p>Customize your sound by selecting one of Splat's many diverse sound banks. The sequencer allows users to layer samples over a four measure loop to dynamically create songs.
+                </p><p>
+                    Built on a MongoDB, Express.js, React / Redux, and Node.js (MERN) stack. Splat uses Tone.js to control swing and ensure sample-accurate timing for audio-sequencer playback.</p>
+            </div>
+            <div class="project">
+                <header>
+                    <h3 class='title pink'>Spellcaster</h3>
+                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                    
+                </header>
+                <img src="images/spellcaster.png" alt="spellcaster">
+                <p><p>Cast spells with words! In Spellcaster, a user can chain sequences of keywords that effects the properties of a 'spell'. These spells move about and effect a grid of cells that contain either a character or nothing at all. </p><p>The spell 'upfooupleftredbar' contains the keywords 'up', 'up', 'left', 'red', which determines that the spell will have a red background and will move up 2 spaces and left 1 space per animation frame. </p><p>By pressing space, a user releases that spell and can start a new one. </p><p>Easter eggs include a Typing Test mode that calculates users' typed words per minute and a variation on Snake.</p>
+            </div>
+
+        </section>
+
+    </main>
 </body>
 </html>

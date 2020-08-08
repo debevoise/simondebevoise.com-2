@@ -11,7 +11,9 @@ html, body {
 
 body {
     margin: auto;
-    max-width: 900px;
+    max-width: 1000px;
+    display: flex; 
+    flex-direction: column;
 }
 
 section {
@@ -36,7 +38,7 @@ img {
     max-width: 300px;
 }
 
-main {
+.about {
     width: 300px;
 }
 
@@ -107,6 +109,8 @@ section > h1 {
     padding: 5px 0;
 } */
 
+
+
 h2 {
     color: hotpink;
     font-size: 20px;
@@ -118,11 +122,11 @@ a {
     color: rgb(253, 152, 0);
 }
 
-/* a:hover {
-    color: rgb(255, 81, 0);
-} */
+a:hover {
+    background-color: purple;
+}
 
-.nav-menu li:hover {
+li:hover {
     background-color: purple;
 }
 
@@ -134,11 +138,26 @@ a {
     padding: 5px 0;
 }
 
-.slides {
+#projects {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slides {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    /* display: flex;
+    flex-wrap: wrap;*/
+    align-self: center; 
     justify-content: center;
     padding: 10px;
+    max-width: 90%;
+}
+
+.slides h1 {
+    width: 1vw;
 }
 
 .project {
@@ -148,46 +167,52 @@ a {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    flex: 1 1 350px; 
+    flex: 1 0 350px; 
     border: 1px solid var(--orange);
-    max-width: 600px;
-    width: 100%;
     margin: 10px;
 }
 
-.project header {
-    padding: 10px;
+.project > header {
+    padding: 0 10px;
     font-size: 25px;
 
     display: flex;
     justify-content: space-between;
 }
 
-.project:nth-of-type(1) {
-    background-color: rgb(2, 81, 172);
+.project header h3 {
+    padding: 10px 0;
+} 
+
+.project header a {
+    padding: 10px 0;
 }
 
-.project:nth-of-type(2) {
-    background-color: rgb(2, 81, 172);
+.project:nth-of-type(3n + 1) {
+    background-color: #001da0;
 }
 
-.project:nth-of-type(3) {
-    background-color: rgb(2, 81, 172);
+.project:nth-of-type(3n + 2) {
+    background-color: #023658;
 }
 
-.project:nth-of-type(4) {
-    background-color: rgb(2, 81, 172);
+.project:nth-of-type(3n + 3) {
+    background-color: #110135;
 }
+
 
 /* .slides img {
     
 } */
 
 .project p {
-    flex: 1 0 auto;
     padding: 10px 10px 0 10px;
 }
 
 .project p:last-of-type {
     padding: 10px;
+}
+
+.project img {
+    padding-bottom: 10px;
 }
