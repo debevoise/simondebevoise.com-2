@@ -10,52 +10,71 @@
 </head>
 <body>
     <section>
-        <img src="images/green.jpg" alt="Specs pass">
+        <img class='my-face' src="images/green.jpg" alt="Specs pass">
         <main>
             <h1>Simon DeBevoise</h1>
             <p>Currently building a pedal steel guitar with Pure Data on a Raspberry Pi.</p>
-            <p>Find me biking in NYC or by the Smokey's and jamming in Bushwick warehouses.</p>
-            <p>Software engineer at Bloomberg LP and major code enthusiast.</p>
+            <p>Find me biking in NYC and the Smoky Mountains, jamming in Bushwick warehouses, learning actual pedal steel guitar.</p>
+            <p>Software engineer at Bloomberg LP and design geek.</p>
         </main>
     </section>
-    <header>
+    <header class='nav-menu'>
         <nav>
             <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Experience</li>
-                <li>Music</li>
-                <li>Thoughts & Ideas</li>
-                <li>Typing</li>
+                <a href="#about"><li>About</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#experience"><li>Experience</li></a>
+                <a href="#music"><li>Music</li></a>
+                <a href="#ideas"><li>Thoughts & Ideas</li></a>
+                <a href="#typing"><li>Typing</li></a>
             </ul>
         </nav>
-        <div>
-            <h2>Find me on the internet:</h2>
+        <div class="links">
+            <h2>on the internet:</h2>
             <ul>
-                <li><a href="mailto:simondebevoise@gmail.com">simondebevoise@gmail.com</a></li>
-                <li><a href="http://github.com/debevoise">github.com/debevoise</a></li>
-                <li><a href="https://soundcloud.com/simondebevoise">soundcloud.com/simondebevoise</a></li>
-                <li><a href="https://www.linkedin.com/in/simondebevoise">linkedin.com/in/simondebevoise</a></li>
-                <li></li>
-                <li></li>
+                <a href="mailto:simondebevoise@gmail.com" 
+                    rel="noopener noreferrer"><li>simondebevoise@gmail.com</li></a>
+                <a href="http://github.com/debevoise" rel="noopener noreferrer"><li> github.com/debevoise</li></a>
+                <a href="https://soundcloud.com/simondebevoise" rel="noopener noreferrer"><li>soundcloud.com/simondebevoise</li></a>
+                <a href="https://www.linkedin.com/in/simondebevoise" rel="noopener noreferrer"><li>linkedin.com/in/simondebevoise</li></a>
             </ul>
         </div>
     </header>
-    <section>
-        <header>
-            <h1>projects</h1>
-        </header>
-        <div class='project'>
-            <h2>Tilda</h2>
+    <section id='projects' class='slides' >
+        <h1>projects</h1>
+        <div class="project">
+            <header>
+                <h3>TILDA</h3>
+                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+            </header>
+            <img src="images/tilda.png" alt="TILDA, a fullstack clone of Spotify">
+            <p>
+                Tilda is an online music streaming platform modeled after Spotify.  
+            </p>
+            <p>Users can search for new music, add songs, artists, and albums to their libraries, and create and edit playlists, all while enjoying uninterrupted audio playback.</p>
+                
+                <p>Tilda is built with a Ruby on Rails and PostgreSQL backend and uses React/Redux to deliver a dynamic frontend user experience.</p> 
         </div>
-        <div class='project'>
-            <h2>Spellcaster</h2>
+        <div class="project">
+            <header>
+                <h3>Splat</h3>
+                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+            </header>
+            <img src="images/splat.png" alt="splat drum sequencer">
         </div>
-        <div class='project'>
-            <h2>Portefeuille</h2>
+        <div class="project">
+            <header>
+                <h3>Spellcaster</h3>
+                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+            </header>
+            <img src="images/spellcaster.png" alt="spellcaster">
         </div>
-        <div class='project'>
-            <h2>Splat</h2>
+        <div class="project">
+            <header>
+                <h3>Portefeuille</h3>
+                <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+            </header>
+            <a href="images/portefeuille.png" alt='portefeuille'></a>
         </div>
     </section>
 </body>
