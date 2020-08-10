@@ -6,10 +6,11 @@
     <!-- <script defer src="index.js"></script> -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <section>
+    <section class='intro'>
         <img class='my-face' src="images/green.jpg" alt="Specs pass">
         <div class='about'>
             <h1>Simon DeBevoise</h1>
@@ -21,12 +22,12 @@
     <header class='nav-menu'>
         <nav>
             <ul>
-                <a href="#about"><li>About</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#experience"><li>Experience</li></a>
-                <a href="#music"><li>Music</li></a>
-                <a href="#ideas"><li>Thoughts & Ideas</li></a>
-                <a href="#typing"><li>Typing</li></a>
+                <a href="#about"><li>about</li></a>
+                <a href="#projects"><li>projects</li></a>
+                <a href="#experience"><li>experience</li></a>
+                <a href="#music"><li>music</li></a>
+                <a href="#ideas"><li>thoughts & ideas</li></a>
+                <a href="#typing"><li>typing</li></a>
             </ul>
         </nav>
         <div class="links">
@@ -43,11 +44,10 @@
     <main id='projects'>
         <h1>projects</h1>
         <section class='slides' >
-            
             <div class="project">
                 <header>
                     <h3 class='title pink'>Tilda</h3>
-                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                    <h3><a href="#">live</a>  <a href="#">source</a></h3>
                 </header>
                 <img src="images/tilda.png" alt="TILDA, a fullstack clone of Spotify">
                 <p>
@@ -59,8 +59,17 @@
             </div>
             <div class="project">
                 <header>
+                    <h3 class='title pink'>Spellcaster</h3>
+                    <h3><a href="#">live</a>  <a href="#">source</a></h3>
+                    
+                </header>
+                <img src="images/spellcaster.png" alt="spellcaster">
+                <p><p>Cast spells with words! In Spellcaster, a user can chain sequences of keywords that effects the properties of a 'spell'. These spells move about and effect a grid of cells that contain either a character or nothing at all. </p><p>The spell 'upfooupleftredbar' contains the keywords 'up', 'up', 'left', 'red', which determines that the spell will have a red background and will move up 2 spaces and left 1 space per animation frame. </p><p>By pressing space, a user releases that spell and can start a new one. </p><p>Easter eggs include a Typing Test mode that calculates users' typed words per minute and a variation on Snake.</p>
+            </div>
+            <div class="project">
+                <header>
                     <h3 class='title pink'>Splat</h3>
-                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                    <h3> <a href="#">live</a>  <a href="#">source</a> </h3>
                 </header>
                 <img src="images/splat.png" alt="splat drum sequencer">
                 <p>Splat is an interactive, easy-to-use audio sampler and sequencer. Users can create beats by simply pressing keys or clicking. </p><p>Customize your sound by selecting one of Splat's many diverse sound banks. The sequencer allows users to layer samples over a four measure loop to dynamically create songs.
@@ -69,16 +78,29 @@
             </div>
             <div class="project">
                 <header>
-                    <h3 class='title pink'>Spellcaster</h3>
-                    <h3><a href="#">~>LIVE</a>  <a href="#">~>SOURCE</a></h3>
+                    <h3 class='title pink'>Portefeuille</h3>
+                    <h3><a href="#">live</a>  <a href="#">source</a></h3>
                     
                 </header>
-                <img src="images/spellcaster.png" alt="spellcaster">
-                <p><p>Cast spells with words! In Spellcaster, a user can chain sequences of keywords that effects the properties of a 'spell'. These spells move about and effect a grid of cells that contain either a character or nothing at all. </p><p>The spell 'upfooupleftredbar' contains the keywords 'up', 'up', 'left', 'red', which determines that the spell will have a red background and will move up 2 spaces and left 1 space per animation frame. </p><p>By pressing space, a user releases that spell and can start a new one. </p><p>Easter eggs include a Typing Test mode that calculates users' typed words per minute and a variation on Snake.</p>
+                <img src="images/portefeuille.png" alt="portefeuille">
+                <p>A stock portfolio web app. Sign up to Portefeuille to buy stocks with fake money, keep track of your transactions, and follow the ups and downs of market prices. 
+                    </p><p>
+                    API requests to IEX Cloud provide real-time market data. Built on a Ruby on Rails, Postgres, React / Redux stack for the NYC Tech Talent Pipeline coding challenge.</p>
             </div>
-
         </section>
-
     </main>
+    <main id='experience'>
+        <h1>experience</h1>
+        <section>
+            
+        </section>
+    </main>
+    <main id='coding'>
+        <h1>coding</h1>
+    </main>
+    <main id='experience'>
+        <h1>experience</h1>
+    </main>
+
 </body>
 </html>
