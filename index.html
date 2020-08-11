@@ -6,8 +6,11 @@
     <!-- <script defer src="index.js"></script> -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js">hljs.initHighlightingOnLoad();</script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>slime</title>
 </head>
 <body>
     <nav id='nav-bar'>
@@ -101,6 +104,7 @@
                 </div>
                 <div class='right'>
                     <h2>Software Engineer</h2>
+                    <p>July 2020 - present</p>
                     <p>Currently learning the ins and outs of the Terminal and Bloomberg's stack.</p>
                 </div>
             </div>
@@ -109,7 +113,8 @@
                     <img class="flip logo" src="images/corona.png" alt="corona care usa">
                 </div>
                 <div class='right'>
-                    <h2>Volunteer Tech Lead</h2>
+                    <h2>Tech Lead</h2>
+                    <p>March 2020 - June 2020</p>
                     <p>Led a team of four volunteer software engineers to build out a platform to help connect families affected by COVID-19 to donors. </p><p> Oversaw Git workflow with frequent code reviews and implemented security protocols across the stack to ensure our site was secure and bug free for our June launch. </p><p>Architected Ruby on Rails API with token-based authentication and ensured backend data compliance with the site’s legal requirements.</p>
                 </div>
             </div>
@@ -120,28 +125,87 @@
                 <div class='right'>
                     <h1>The NoMad Restaurant</h1>
                     <h2>Assistant Server</h2>
-                    <p>Managed a section of 50 diners per evening at high volume, Michelin-starred restaurant and coordinated with the kitchen and server team. </p><p>Coached new team members on the restaurant’s culture and service standards and set an example of the attention to detail needed to deliver a consistently good diner experience on tough or busy nights.</p>
+                    <p>Sep 2018 - August 2019</p>
+                    <p>Managed a section of 40 diners per evening at high volume, Michelin-starred restaurant. </p><p>Trained new team members on the restaurant’s culture and service standards. </p><p>Took initiate on busy nights and maintained communication between the kitchen and server teams.</p>
                 </div>
             </div>
-            <!-- <div>
-                <div class='left'>
-                    <h2>Software engineer at Bloomberg LP</h2>
-                    <p></p>
-                </div>
-                <div class='right image'>
-                    <h3>Software engineer at Bloomberg LP</h3>
-                    <p></p>
-                </div>
-            </div> -->
-
         </section>
     </main>
     <main id='coding'>
         <h1>coding</h1>
+        <ul>
+            <pre>
+                <code class='js'>
+function frame() {
+    this.trimSpells();
+    this.spells.forEach(spell => spell.move());
+    this.currentSpell.move();
+
+    if (this.typetest) {
+        this.typetest.render();
+    }
+}
+                </code>
+            </pre>
+            <pre>
+                <code class='python'>
+def two_sum(nums, k):
+    lookup = {}
+
+    for i, num in enumerate(nums):
+        comp = k - num
+
+        if comp in lookup: 
+            return [lookup[comp], i]
+
+        lookup[num] = i
+                </code>
+            </pre>
+            <pre>
+                <code class='ruby'>
+def greatest_common_divisor(foo, bar)
+    if bar == 0
+        foo
+    else
+        greatest_common_divisor(bar, foo % bar)
+    end
+end
+                </code>
+            </pre>
+            <pre>
+                <code class='rails'>
+belongs_to :album
+
+has_one_attached :song_file, dependent: :destroy
+has_one :artist, through: :album
+has_many :likes, as: :likeable
+has_many :playlist_songs
+has_many :playlists, through: :playlist_songs
+                </code>
+            </pre>
+            <pre>
+                <code class='sql'>
+SELECT movies.title
+FROM movies
+JOIN castings
+    ON movies.id = castings.movie_id
+JOIN actors
+    ON castings.actor_id = actors.id
+WHERE actors.name = 'Harrison Ford';
+                </code>
+            </pre>
+        </ul>
+        
     </main>
-    <main id='experience'>
-        <h1>experience</h1>
+    <main id='music'>
+        <h1>music</h1>
     </main>
+    <main id='typing'>
+        <h1>typing</h1>
+    </main>
+    <footer>
+        Site designed by Simon DeBevoise, all rights reserved. 
+    </footer>
 
 </body>
 </html>
