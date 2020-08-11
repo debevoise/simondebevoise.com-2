@@ -33,8 +33,6 @@ section {
     padding: 50px 0 50px 0;
 }
 
-.intro {}
-
 img {
     width: 100%;
 }
@@ -236,4 +234,54 @@ li:hover {
 
 .title {
     font-weight: 500;
+}
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.split .left {
+    width: 46%;
+    flex: 1 0 200px;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 10px;
+}
+
+
+.split h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    padding-top: 0;
+}
+
+.split h2 {
+    padding-bottom: 10px;
+}
+
+
+.split .right {
+    width: 46%;
+    flex: 1 0 300px;
+    padding: 0 10px 10px 10px;
+    /* margin-bottom: 10px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+
+.flip {
+    filter: invert(180);
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+}
+
+#experience {
+    padding-bottom: 0;
 }
