@@ -131,8 +131,8 @@
     </main>
     <main id='coding'>
         <h1>coding</h1>
-        <section>
-            <pre>
+        <section class='justify-center'>
+            <pre class='code-block'>
                 <code class='language-javascript'>
 function frame() {
     this.trimSpells();
@@ -144,7 +144,7 @@ function frame() {
     }
 }</code>
             </pre>
-            <pre>
+            <pre class='code-block'>
                 <code class='language-python'>
 def two_sum(nums, k):
     lookup = {}
@@ -158,7 +158,7 @@ def two_sum(nums, k):
         lookup[num] = i
                 </code>
             </pre>
-            <pre>
+            <pre class='code-block'>
                 <code class='language-ruby'>
 def gcd(a, b)
     b == 0 ? a : gcd(b, a % b)
@@ -168,7 +168,7 @@ def least_common_multiple(a, b)
     a * b / gcd(a, b)
 end</code>
             </pre>
-            <pre>
+            <pre class='code-block'>
                 <code class='language-ruby'>
 belongs_to :album
 
@@ -178,7 +178,7 @@ has_many :likes, as: :likeable
 has_many :playlist_songs
 has_many :playlists, through: :playlist_songs</code>
             </pre>
-            <pre>
+            <pre class='code-block'>
                 <code class='language-sql'>
 SELECT movies.title
 FROM movies
