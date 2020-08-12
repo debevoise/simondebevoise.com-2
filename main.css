@@ -291,15 +291,21 @@ li:hover {
     font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
 
-pre {
-    max-width: 100%;
-}
 
-pre code {
-    overflow-y: auto;
-}
 
 .max-width-900 {
     width: 100%;
     max-width: 900px;
+}
+
+pre {
+    margin: 10px;
+    /* border-radius: 10px; */
+    max-width: 95vw;
+    overflow-y: auto;
+}
+
+footer {
+    border: 1px solid var(--orange);
+    border-bottom: 0;
 }
