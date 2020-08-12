@@ -134,6 +134,8 @@
         <section class='justify-center'>
             <pre class='code-block'>
                 <code class='language-javascript'>
+// JavaScript
+
 function frame() {
     this.trimSpells();
     this.spells.forEach(spell => spell.move());
@@ -146,6 +148,8 @@ function frame() {
             </pre>
             <pre class='code-block'>
                 <code class='language-python'>
+# Python
+
 def two_sum(nums, k):
     lookup = {}
 
@@ -160,6 +164,8 @@ def two_sum(nums, k):
             </pre>
             <pre class='code-block'>
                 <code class='language-ruby'>
+# Ruby
+
 def gcd(a, b)
     b == 0 ? a : gcd(b, a % b)
 end
@@ -170,6 +176,8 @@ end</code>
             </pre>
             <pre class='code-block'>
                 <code class='language-ruby'>
+# Ruby on Rails
+
 belongs_to :album
 
 has_one_attached :song_file, dependent: :destroy
@@ -179,7 +187,22 @@ has_many :playlist_songs
 has_many :playlists, through: :playlist_songs</code>
             </pre>
             <pre class='code-block'>
+                <code class='language-css'>
+/* CSS */
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 50px 0;
+    max-width: 100%;
+}</code>
+            </pre>
+            <pre class='code-block'>
                 <code class='language-sql'>
+--SQL
+
 SELECT movies.title
 FROM movies
 JOIN castings
