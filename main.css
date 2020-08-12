@@ -70,7 +70,7 @@ header {
 }
 
 header.nav-menu > * {
-    min-width: 300px;
+    width: 300px;
     color: var(--pink);
     margin-bottom: 50px;
 }
@@ -299,4 +299,25 @@ footer {
 code {
     max-width: 100%;
     overflow: auto;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 10;
+    padding: 7px;
+}
+
+.dropdown-content {
+    background-color: black;
+    position: absolute;
+    display: none;
+    cursor: default;
+    top: 0px;
+    right: 7px;
+    z-index: 4;
+    box-sizing: content-box;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
