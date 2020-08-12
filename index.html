@@ -187,6 +187,40 @@ has_many :playlist_songs
 has_many :playlists, through: :playlist_songs</code>
             </pre>
             <pre class='code-block'>
+                <code class='language-jsx'>
+// React.js
+
+const Counter = (props) =&gt; {
+    let [count, setCount] = useState(0);
+
+    return (
+        &lt;main&gt;
+            Count is {count}. 
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                Increment
+            &lt;/button&gt;
+        &lt;/main&gt;
+    )
+}</code>
+            </pre>
+            <pre class='code-block'>
+                <code class='language-javascript'>
+// Redux.js
+
+const map_state_props = ({ entities, session }) => {
+    const currentUser = entities.users[session.id];
+    let likes = currentUser ? currentUser.likes.songs : null;
+
+    return {
+        likes, type: 'Song', loggedIn: !!(session.id)
+    }
+}
+
+const map_dispatch_props = dispatch => ({
+    like: (id) => dispatch(like('songs', id))
+})</code>
+            </pre>
+            <pre class='code-block'>
                 <code class='language-css'>
 /* CSS */
 

@@ -1,5 +1,4 @@
 html, body {
-    background-color: rgb(0, 0, 117);
     background-color: black;
     font-family:  Helvetica, Arial, sans-serif;
     color: var(--orange);
@@ -8,6 +7,7 @@ html, body {
 :root {
     --orange: rgb(253, 152, 0);
     --pink: hotpink;
+    --purple: purple;
 }
 
 body {
@@ -29,7 +29,7 @@ section {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 50px 0;
     max-width: 100%;
 }
@@ -47,7 +47,7 @@ img {
 }
 
 h1 {
-    color: hotpink;
+    color: var(--pink);
     font-size: 30px;
     font-weight: 500;
     padding: 20px 0;
@@ -70,7 +70,7 @@ header {
 
 header.nav-menu > * {
     min-width: 300px;
-    color: hotpink;
+    color: var(--pink);
     margin-bottom: 50px;
 }
 
@@ -79,8 +79,8 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    border-bottom: 1px solid hotpink;
-    border-left: 1px solid hotpink;
+    border-bottom: 1px solid var(--pink);
+    border-left: 1px solid var(--pink);
     min-height: 100%;
 }
 
@@ -120,22 +120,22 @@ section > h1 {
 
 
 h2 {
-    color: hotpink;
+    color: var(--pink);
     font-size: 20px;
     padding-bottom: 10px;
 }
 
 a { 
     text-decoration: none;
-    color: rgb(253, 152, 0);
+    color: var(--orange);
 }
 
 a:hover {
-    background-color: purple;
+    background-color: var(--purple);
 }
 
 li:hover {
-    background-color: purple;
+    background-color: var(--purple);
 }
 
 .links {
