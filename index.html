@@ -29,8 +29,9 @@
                 <a href="#about"><li>about</li></a>
                 <a href="#projects"><li>projects</li></a>
                 <a href="#experience"><li>experience</li></a>
+                <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
-                <a href="#ideas"><li>thoughts & ideas</li></a>
+                <!-- <a href="#ideas"><li>ideas</li></a> -->
                 <a href="#typing"><li>typing</li></a>
             </ul>
         </nav>
@@ -159,8 +160,7 @@ def two_sum(nums, k):
         if comp in lookup: 
             return [lookup[comp], i]
 
-        lookup[num] = i
-                </code>
+        lookup[num] = i</code>
             </pre>
             <pre class='code-block'>
                 <code class='language-ruby'>
@@ -192,11 +192,12 @@ has_many :playlists, through: :playlist_songs</code>
 
 const Counter = (props) =&gt; {
     let [count, setCount] = useState(0);
+    const increment = () =&gt; setCount(count + 1);
 
     return (
         &lt;main&gt;
             Count is {count}. 
-            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+            &lt;button onClick={increment}&gt;
                 Increment
             &lt;/button&gt;
         &lt;/main&gt;
@@ -221,6 +222,21 @@ const map_dispatch_props = dispatch => ({
 })</code>
             </pre>
             <pre class='code-block'>
+                <code class='language-javascript'>
+// Express.js
+
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    Sample.findById(id)
+        .then(sample => res.json(sample))
+        .catch(err => {
+            res.status(404).json({ 
+                nosamplefound: `No sample found with ID: ${id}` 
+            })
+        });
+});</code>
+            </pre>
+            <pre class='code-block'>
                 <code class='language-css'>
 /* CSS */
 
@@ -232,6 +248,19 @@ section {
     padding: 50px 0;
     max-width: 100%;
 }</code>
+            </pre>
+            <pre class='code-block'>
+                <code class='language-html'>
+&lt;!-- HTML --&gt;
+
+&lt;pre class='code-block'&gt;
+    &lt;code class='language-html'&gt;
+    &amp;lt;pre class='code-block'&amp;gt;
+        &amp;lt;code class='language-html'&amp;gt;
+        &amp;lt;/code&amp;gt;
+    &amp;lt;/pre&amp;gt;
+    &lt;/code&gt;
+&lt;/pre&gt;</code>
             </pre>
             <pre class='code-block'>
                 <code class='language-sql'>
@@ -250,6 +279,13 @@ WHERE actors.name = 'Harrison Ford';</code>
     </main>
     <main id='music'>
         <h1>music</h1>
+        <section class='width-100'>
+            <iframe src="https://open.spotify.com/embed/playlist/3qe8FVlWRmZJKYoKE0gPPE" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            
+            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1097784508&color=%23ff69b4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+            <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3831287408/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://santayalla.bandcamp.com/album/santa-yalla-ep">Santa Yalla EP by Santa Yalla</a></iframe>
+        </section>
     </main>
     <main id='typing'>
         <h1>typing</h1>
