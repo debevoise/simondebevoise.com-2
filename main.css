@@ -324,7 +324,9 @@ code {
 
 .dropdown:hover .dropdown-content {
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
+    max-width: 300px;
 }
 
 .nav-bar {
