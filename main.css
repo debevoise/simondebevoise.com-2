@@ -1,13 +1,24 @@
-html, body {
-    background-color: black;
-    font-family:  Helvetica, Arial, sans-serif;
-    color: var(--orange);
-}
-
 :root {
     --orange: #fd9800;
     --pink: hotpink;
     --purple: purple;
+    --background: black;
+    --invert: 180;
+}
+
+body.light {
+    --orange: #0019fd;
+    --pink: rgb(41, 206, 55);
+    --purple: rgb(48, 132, 211);
+    --background: white;
+    --invert: 0;
+}
+
+
+html, body {
+    background-color: var(--background);
+    font-family:  Helvetica, Arial, sans-serif;
+    color: var(--orange);
 }
 
 body {
@@ -145,7 +156,7 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: var(--background);
 }
 
 .slides {
@@ -246,7 +257,7 @@ li:hover {
 }
 
 .flip {
-    filter: invert(180);
+    filter: invert(var(--invert));
 }
 
 .logo {
@@ -303,7 +314,7 @@ code {
     z-index: 10;
     border-left: 1px solid var(--pink);
     border-bottom: 1px solid var(--pink);
-    background-color: black;
+    background-color: var(--background);
 }
 
 .dropdown h2 {
@@ -313,7 +324,7 @@ code {
 }
 
 .dropdown-content {
-    background-color: black;
+    background-color: var(--background);
     /* position: absolute; */
     display: none;
     cursor: default;
