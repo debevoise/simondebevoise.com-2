@@ -30,7 +30,7 @@ section {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
     padding: 50px 0;
     max-width: 100%;
 }
@@ -75,7 +75,7 @@ header.nav-menu > * {
     margin-bottom: 50px;
 }
 
-header nav ul {
+.nav-menu nav ul {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -295,23 +295,47 @@ code {
     overflow: auto;
 }
 
+
 .dropdown {
     position: relative;
+    display: flex;
+    flex-direction: row-reverse;
     z-index: 10;
-    padding: 7px;
+    border-left: 1px solid var(--pink);
+    border-bottom: 1px solid var(--pink);
+    background-color: black;
+}
+
+.dropdown h2 {
+    color: var(--pink);
+    padding: 10px;
+    cursor: pointer;
 }
 
 .dropdown-content {
     background-color: black;
-    position: absolute;
+    /* position: absolute; */
     display: none;
     cursor: default;
-    top: 0px;
-    right: 7px;
-    z-index: 4;
-    box-sizing: content-box;
+    /* top: 0px;
+    right: 0px; */
+    z-index: 10;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.dropdown li {
+    padding: 10px;
 }

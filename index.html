@@ -21,16 +21,6 @@
                 <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
                 <a href="#typing"><li>typing</li></a>
-                <!-- <div class='dropdown'>
-                    <h2>links</h2>
-                    <ul class='dropdown-content'>
-                        <a href="mailto:simondebevoise@gmail.com" 
-                            rel="noopener noreferrer"><li>simondebevoise@gmail.com</li></a>
-                        <a href="http://github.com/debevoise" rel="noopener noreferrer"><li> github.com/debevoise</li></a>
-                        <a href="https://soundcloud.com/simondebevoise" rel="noopener noreferrer"><li>soundcloud.com/simondebevoise</li></a>
-                        <a href="https://www.linkedin.com/in/simondebevoise" rel="noopener noreferrer"><li>linkedin.com/in/simondebevoise</li></a>
-                    </ul>
-                </div> -->
             </ul>
         </nav>
     </header>
@@ -229,7 +219,7 @@ const Counter = (props) =&gt; {
                 <code class='language-javascript'>
 // Redux.js
 
-const map_state_props = ({ entities, session }) => {
+const mapStateProps = ({ entities, session }) => {
     const currentUser = entities.users[session.id];
     let likes = currentUser ? currentUser.likes.songs : null;
 
@@ -238,7 +228,7 @@ const map_state_props = ({ entities, session }) => {
     }
 }
 
-const map_dispatch_props = dispatch => ({
+const mapDispatchProps = dispatch => ({
     like: (id) => dispatch(like('songs', id))
 })</code>
             </pre>
@@ -252,7 +242,7 @@ router.get('/:id', (req, res) => {
         .then(sample => res.json(sample))
         .catch(err => {
             res.status(404).json({ 
-                nosamplefound: `No sample found with ID: ${id}` 
+                nosamplefound: `404: ${id}` 
             })
         });
 });</code>
