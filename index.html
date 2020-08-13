@@ -11,10 +11,21 @@
     <title>slime</title>
 </head>
 <body>
-    <nav id='nav-bar'>
+    <header class='nav-bar max-width-900'>
+        <nav class='dropdown'>
+            <h2>menu</h2>
+            <ul class='dropdown-content'>
+                <a href="#about"><li>about</li></a>
+                <a href="#projects"><li>projects</li></a>
+                <a href="#experience"><li>experience</li></a>
+                <a href="#coding"><li>coding</li></a>
+                <a href="#music"><li>music</li></a>
+                <a href="#typing"><li>typing</li></a>
+            </ul>
+        </nav>
+    </header>
 
-    </nav>
-    <section class='intro max-width-900'>
+    <section id='about' class='intro max-width-900'>
         <img class='my-face' src="images/green.jpg" alt="Specs pass">
         <div class='about'>
             <h1>Simon DeBevoise</h1>
@@ -208,7 +219,7 @@ const Counter = (props) =&gt; {
                 <code class='language-javascript'>
 // Redux.js
 
-const map_state_props = ({ entities, session }) => {
+const mapStateProps = ({ entities, session }) => {
     const currentUser = entities.users[session.id];
     let likes = currentUser ? currentUser.likes.songs : null;
 
@@ -217,7 +228,7 @@ const map_state_props = ({ entities, session }) => {
     }
 }
 
-const map_dispatch_props = dispatch => ({
+const mapDispatchProps = dispatch => ({
     like: (id) => dispatch(like('songs', id))
 })</code>
             </pre>
@@ -231,7 +242,7 @@ router.get('/:id', (req, res) => {
         .then(sample => res.json(sample))
         .catch(err => {
             res.status(404).json({ 
-                nosamplefound: `No sample found with ID: ${id}` 
+                nosamplefound: `404: ${id}` 
             })
         });
 });</code>
