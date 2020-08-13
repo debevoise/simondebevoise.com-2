@@ -326,7 +326,7 @@ code {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    max-width: 300px;
+    width: 300px;
 }
 
 .nav-bar {
