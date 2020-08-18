@@ -1,24 +1,24 @@
 :root {
-    --orange: #fd9800;
-    --pink: hotpink;
-    --purple: purple;
-    --background: black;
-    --invert: 180;
+    --text-color: #fd9800;
+    --accent-color: #ff69b4;
+    --highlight-color: #800080;
+    --background-color: #000000;
+    --invert-color: 180;
 }
 
 body.light {
-    --orange: #0019fd;
-    --pink: rgb(41, 206, 55);
-    --purple: rgb(48, 132, 211);
-    --background: white;
-    --invert: 0;
+    --text-color: #0019fd;
+    --accent-color: rgb(41, 206, 55);
+    --highlight-color: rgb(48, 132, 211);
+    --background-color: white;
+    --invert-color: 0;
 }
 
 
 html, body {
-    background-color: var(--background);
+    background-color: var(--background-color);
     font-family:  Helvetica, Arial, sans-serif;
-    color: var(--orange);
+    color: var(--text-color);
 }
 
 body {
@@ -59,7 +59,7 @@ img {
 }
 
 h1 {
-    color: var(--pink);
+    color: var(--accent-color);
     font-size: 30px;
     font-weight: 500;
     padding: 20px 0;
@@ -82,7 +82,7 @@ header {
 
 header.nav-menu > * {
     width: 300px;
-    color: var(--pink);
+    color: var(--accent-color);
     margin-bottom: 50px;
 }
 
@@ -91,8 +91,8 @@ header.nav-menu > * {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    border-bottom: 1px solid var(--pink);
-    border-left: 1px solid var(--pink);
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
     min-height: 100%;
 }
 
@@ -126,22 +126,22 @@ section > h1 {
 }
 
 h2 {
-    color: var(--pink);
+    color: var(--accent-color);
     font-size: 20px;
     padding-bottom: 10px;
 }
 
 a { 
     text-decoration: none;
-    color: var(--orange);
+    color: var(--text-color);
 }
 
 a:hover {
-    background-color: var(--purple);
+    background-color: var(--highlight-color);
 }
 
 li:hover {
-    background-color: var(--purple);
+    background-color: var(--highlight-color);
 }
 
 .links {
@@ -156,7 +156,7 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--background);
+    background-color: var(--background-color);
 }
 
 .slides {
@@ -175,7 +175,7 @@ li:hover {
     display: flex;
     flex-direction: column;
     flex: 1 0 350px; 
-    border: 1px solid var(--orange);
+    border: 1px solid var(--text-color);
     margin: 10px;
     /* max-width: 100%; */
 }
@@ -185,7 +185,7 @@ li:hover {
     font-size: 25px;
 
     display: flex;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--text-color);
     justify-content: space-between;
 }
 
@@ -211,12 +211,12 @@ li:hover {
 
 .project img {
     margin-bottom: 10px;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--text-color);
     
 }
 
 .pink {
-    color: var(--pink);
+    color: var(--accent-color);
 }
 
 .title {
@@ -257,7 +257,7 @@ li:hover {
 }
 
 .flip {
-    filter: invert(var(--invert));
+    filter: invert(var(--invert-color));
 }
 
 .logo {
@@ -279,7 +279,7 @@ li:hover {
 }
 
 footer {
-    border: 1px solid var(--orange);
+    border: 1px solid var(--text-color);
     border-bottom: 0;
     padding: 5px
 }
@@ -312,19 +312,19 @@ code {
     display: flex;
     flex-direction: row-reverse;
     z-index: 10;
-    border-left: 1px solid var(--pink);
-    border-bottom: 1px solid var(--pink);
-    background-color: var(--background);
+    border-left: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    background-color: var(--background-color);
 }
 
 .dropdown h2 {
-    color: var(--pink);
+    color: var(--accent-color);
     padding: 10px;
     cursor: pointer;
 }
 
 .dropdown-content {
-    background-color: var(--background);
+    background-color: var(--background-color);
     /* position: absolute; */
     display: none;
     cursor: default;
@@ -352,3 +352,11 @@ code {
 .dropdown li {
     padding: 10px;
 }
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    border-color: transparent;
+}
+
