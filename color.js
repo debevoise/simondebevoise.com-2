@@ -26,3 +26,29 @@ function setColor(e) {
     root.style.setProperty(cssVar, value);
 }
 
+function setColorByName(name, value) {
+    const cssVar = `--${name}`;
+    root.style.setProperty(cssVar, value)
+}
+
+function randomColor() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+
+const randomize = () => {
+    colors.forEach(color => { 
+        const rand = randomColor();
+        console.log(rand);
+        setColorByName(color, rand);
+    })
+}
+
+// window.addEventListener('DOMContentLoaded', randomize);
+
+let redoButton = document.getElementById('redo-button')
+
+redoButton.addEventListener('click', () => {
+    redoButton.style.setProperty('background-color', randomColor())
+})
+
+
