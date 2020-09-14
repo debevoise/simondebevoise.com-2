@@ -1,12 +1,7 @@
 const root = document.documentElement;
-const cookie = {
-    
-}
+const cookie = "foo=bar";
+document.cookie = cookie;
 
-// const backgroundColor = document.getElementById('background-color')
-// const highlightColor = document.getElementById('highlight-color')
-// const accentColor = document.getElementById('accent-color')
-// const textColor = document.getElementById('text-color')
 
 const colors = [
     'background-color',
@@ -15,40 +10,57 @@ const colors = [
     'highlight-color'
 ]
 
-colors.forEach(color => {
-    const colorEle = document.getElementById(color);
-    colorEle.addEventListener("change", setColor);
-})
-
-function setColor(e) {
-    const { id, value } = e.target;
-    const cssVar = `--${id}`;
-    root.style.setProperty(cssVar, value);
+const defaults = {
+    'background-color':     "#000000",
+    'accent-color':         "#ff69b4",
+    'text-color':           "#800080",
+    'highlight-color':      "#fd9800",
 }
 
-function setColorByName(name, value) {
+function setColor(name, value, cookie=true) {
     const cssVar = `--${name}`;
-    root.style.setProperty(cssVar, value)
+    root.style.setProperty(cssVar, value);
+    if (cookie) localStorage.setItem(name, value);
+}
+
+function randomize() {
+    colors.forEach(color => { 
+        const rand = randomColor();
+        setColor(color, rand);
+    })
 }
 
 function randomColor() {
     return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
-const randomize = () => {
-    colors.forEach(color => { 
-        const rand = randomColor();
-        console.log(rand);
-        setColorByName(color, rand);
-    })
+function reset() {
+    colors.forEach(color => setColor(color, defaults[color]))
 }
 
-// window.addEventListener('DOMContentLoaded', randomize);
+function getUserColor(color) {
+    return localStorage.getItem(color) || defaults[color];
+}
 
-let redoButton = document.getElementById('redo-button')
+function main() {
+    // Initialize event handlers
+    colors.forEach(color => {
+        // Set from local storage
+        setColor(color, getUserColor(color));
 
-redoButton.addEventListener('click', () => {
-    redoButton.style.setProperty('background-color', randomColor())
-})
+        const div = document.getElementById(color);
+        div.addEventListener("click", () => setColor(color, randomColor()));
+    })
 
+    
+    // Initialize buttons
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener("click", reset);
+    
+    const randomButton = document.getElementById('random-button');
+    randomButton.addEventListener("click", randomize);
+}
+
+// Run the program (add DOMContentLoaded?)
+main();
 

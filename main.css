@@ -1,8 +1,13 @@
 :root {
-    --text-color: #fd9800;
+    /* --text-color: #fd9800;
     --accent-color: #ff69b4;
     --highlight-color: #800080;
-    --background-color: #000000;
+    --background-color: #000000; */
+
+    --text-color: #000000;
+    --accent-color: #000000;
+    --highlight-color: #000000;
+    --background-color: #000000; 
     --invert-color: 180;
     --code-font: 'Roboto Mono', 'Courier New', Courier, monospace;
     --sans-font: Helvetica, Arial, sans-serif;
@@ -22,6 +27,7 @@ html, body {
     background-color: var(--background-color);
     font-family:  var(--sans-font);
     color: var(--text-color);
+    min-width: 100%;
 }
 
 body {
@@ -455,4 +461,46 @@ button:hover {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+}
+
+.background-color {
+    background-color: var(--background-color);
+    border: 1px solid var(--highlight-color);
+    height: 298px !important;
+    width: 298px !important;
+}
+
+.text-color {
+    background-color: var(--text-color);
+}
+
+.accent-color {
+    background-color: var(--accent-color);
+}
+
+.highlight-color {
+    background-color: var(--highlight-color);
+}
+
+.color {
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+}
+
+.color-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.color-buttons > div {
+    font-size: 20px;
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.color-buttons > div:hover {
+    background-color: var(--highlight-color);
 }

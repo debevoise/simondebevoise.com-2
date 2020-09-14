@@ -20,7 +20,7 @@
                 <a href="#experience"><li>experience</li></a>
                 <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
-                <a href="#typing"><li>typing</li></a>
+                <!-- <a href="#typing"><li>typing</li></a> -->
                 <a href="#color"><li>color</li></a>
             </ul>
         </nav>
@@ -44,7 +44,7 @@
                 <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
                 <!-- <a href="#ideas"><li>ideas</li></a> -->
-                <a href="#typing"><li>typing</li></a>
+                <!-- <a href="#typing"><li>typing</li></a> -->
                 <a href="#color"><li>color</li></a>
             </ul>
         </nav>
@@ -300,7 +300,7 @@ section {
             <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3831287408/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://santayalla.bandcamp.com/album/santa-yalla-ep">Santa Yalla EP by Santa Yalla</a></iframe> -->
         </section>
     </main>
-    <main id='typing'>
+    <!-- <main id='typing'>
         <h1>typing</h1>
         <div id="typing-area">
             <div id="text-display">
@@ -312,45 +312,59 @@ section {
                 <button id="redo-button" onclick="" tabindex="2">redo</button>
             </div>
         </div>
-    </main>
+    </main> -->
     <main id='color'>
         <h1>color</h1>
+        <div class='color-buttons'>
+            <div id='random-button'>random</div>
+            <div id='reset-button'>reset</div>
+        </div>
         <section>
             <div class='color-input'>
-                <input 
+                <div 
                     type="color" 
                     name="text color" 
                     id="text-color"
-                    value="#fd9800"/>
+                    class="text-color color"
+                    value="#fd9800">
+                </div>
             </div>
             <div class='color-input'>
-                <input 
+                <div 
                     type="color" 
                     name="accent color" 
                     id="accent-color"
-                    value="#ff69b4"/>
+                    class="accent-color color"
+                    value="#ff69b4">
+                </div>
+                
             </div>
             <div class='color-input'>
-                <input 
-                    type="color" 
-                    name="highlight" 
-                    id="highlight-color"
-                    value="#800080"/>
-            </div>
-            <div class='color-input'>
-                <input 
+                <div 
                     type="color" 
                     name="background color" 
                     id="background-color"
-                    value="#000000"/>
+                    class="background-color color"
+                    value="#000000">
+                    
+                </div>
             </div>
+            <div class='color-input'>
+                <div 
+                    type="color" 
+                    name="highlight color" 
+                    id="highlight-color"
+                    class="highlight-color color"
+                    value="#800080">
+                </div>
+            </div>
+
         </section> 
     </main>
     <footer>
         Site designed by Simon DeBevoise, all rights reserved. 
     </footer>
 	<script src="prism.js"></script>
-	<script src="typing.js"></script>
     <script src="color.js"></script>
 </body>
 </html>
