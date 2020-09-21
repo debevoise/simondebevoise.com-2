@@ -13,8 +13,8 @@ const colors = [
 const defaults = {
     'background-color':     "#000000",
     'accent-color':         "#ff69b4",
-    'text-color':           "#800080",
-    'highlight-color':      "#fd9800",
+    'text-color':           "#fd9800",
+    'highlight-color':      "#800080",
 }
 
 function setColor(name, value, cookie=true) {
