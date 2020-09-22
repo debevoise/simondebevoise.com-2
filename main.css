@@ -516,3 +516,7 @@ button:hover {
     height: 600px; 
     /* margin: 10px; */
 }
+
+.fg-accent-color {
+    color: var(--accent-color);
+}
