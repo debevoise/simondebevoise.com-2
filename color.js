@@ -1,7 +1,4 @@
 const root = document.documentElement;
-const cookie = "foo=bar";
-document.cookie = cookie;
-
 
 const colors = [
     'background-color',
@@ -17,10 +14,10 @@ const defaults = {
     'highlight-color':      "#800080",
 }
 
-function setColor(name, value, cookie=true) {
+function setColor(name, value, store=true) {
     const cssVar = `--${name}`;
     root.style.setProperty(cssVar, value);
-    if (cookie) localStorage.setItem(name, value);
+    if (store)  localStorage.setItem(name, value);
 }
 
 function randomize() {

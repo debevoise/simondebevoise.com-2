@@ -120,7 +120,7 @@
                     <h1>Resilience Engineering</h1>
                     <h2>Software Engineer</h2>
                     <p>July 2020 - present</p>
-                    <p><a class="fg-accent-color" href="https://principlesofchaos.org/">Chaos engineer</a> on Bloomberg's Resilience Engineering team. Building a set of tools for developers to easily build custom chaos experiments and measure the resiliency of their systems.</p>
+                    <p><a class="fg-accent-color" href="https://principlesofchaos.org/">Chaos engineer</a> on Bloomberg's new Resilience Engineering team. Building a set of tools for developers to easily build custom chaos experiments and measure the resiliency of their systems.</p>
                     <p>Still figuring out how to use a Jira board. Learning technologies like Kafka, Cassandra, Flask, Node and React. Building code features from frontend to backend on a team of three.</p>
                 </div>
             </div>
@@ -159,9 +159,13 @@ function frame() {
     this.spells.forEach(spell => spell.move());
     this.currentSpell.move();
 
-    if (this.typetest) {
-        this.typetest.render();
-    }
+    if (this.typetest) this.typetest.render();
+}
+
+function setColor(name, value, store=true) {
+    const cssVar = `--${name}`;
+    root.style.setProperty(cssVar, value);
+    if (store) localStorage.setItem(name, value);
 }</code>
             </pre>
             <pre class='code-block'>
@@ -227,15 +231,16 @@ const Counter = () =&gt; {
 
 const mapStateProps = ({ entities, session }) => {
     const currentUser = entities.users[session.id];
-    let likes = currentUser ? currentUser.likes.songs : null;
+    const likes = currentUser ? 
+            currentUser.likes.songs : null;
 
     return {
-        likes, type: 'Song', loggedIn: !!(session.id)
+        likes, type: 'Song'
     }
 }
 
 const mapDispatchProps = dispatch => ({
-    like: (id) => dispatch(like('songs', id))
+    like: id => dispatch(like('songs', id))
 })</code>
             </pre>
             <pre class='code-block'>
@@ -253,17 +258,15 @@ router.get('/:id', (req, res) => {
         });
 });</code>
             </pre>
-            <pre class='code-block'>
+            <pre id="css-example" class='code-block'>
                 <code class='language-css'>
 /* CSS */
 
-section {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    padding: 50px 0;
-    max-width: 100%;
+.css-example {
+    background-color: var(--accent-color);
+    box-shadow: -10px -10px var(--text-color);
+    border: 2px double var(--highlight-color);
+    border-radius: 50px;
 }</code>
             </pre>
             <pre class='code-block'>
@@ -283,11 +286,9 @@ section {
                 <code class="language-markdown">
 # and more...
 
-* SQL (PostgreSQL, SQLite, Comdb2) 
-* NoSQL (MongoDB)
-* jQuery 
-* Node.js
-* Amazon Web Services
+* SQL (PostgreSQL, SQLite) 
+* NoSQL (Cassandra, MongoDB)
+* Node.js, Flask
 * Git, Github 
 * Max/MSP, Pure Data</code>
             </pre>
