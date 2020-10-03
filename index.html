@@ -16,12 +16,11 @@
             <h2>menu</h2>
             <ul class='dropdown-content'>
                 <a href="#about"><li>about</li></a>
+                <a href="#color"><li>color</li></a>
                 <a href="#projects"><li>projects</li></a>
                 <a href="#experience"><li>experience</li></a>
                 <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
-                <!-- <a href="#typing"><li>typing</li></a> -->
-                <a href="#color"><li>color</li></a>
                 <a href="resources/Simon_DeBevoise_Resume.pdf" rel="noopener noreferrer"><li>resume</li></a>
             </ul>
         </nav>
@@ -40,13 +39,11 @@
         <nav>
             <ul>
                 <a href="#about"><li>about</li></a>
+                <a href="#color"><li>color</li></a>
                 <a href="#projects"><li>projects</li></a>
                 <a href="#experience"><li>experience</li></a>
                 <a href="#coding"><li>coding</li></a>
                 <a href="#music"><li>music</li></a>
-                <!-- <a href="#ideas"><li>ideas</li></a> -->
-                <!-- <a href="#typing"><li>typing</li></a> -->
-                <a href="#color"><li>color</li></a>
                 <a href="resources/Simon_DeBevoise_Resume.pdf" rel="noopener noreferrer"><li>resume</li></a>
             </ul>
         </nav>
@@ -54,13 +51,55 @@
             <h2>on the internet:</h2>
             <ul>
                 <a href="mailto:simondebevoise@gmail.com" 
-                    rel="noopener noreferrer"><li>firstname.lastname@gmail.com</li></a>
+                    rel="noopener noreferrer"><li>firstnamelastname@gmail.com</li></a>
                 <a href="http://github.com/debevoise" rel="noopener noreferrer"><li> github.com/debevoise</li></a>
                 <a href="https://soundcloud.com/simondebevoise" rel="noopener noreferrer"><li>soundcloud.com/simondebevoise</li></a>
                 <a href="https://www.linkedin.com/in/simondebevoise" rel="noopener noreferrer"><li>linkedin.com/in/simondebevoise</li></a>
             </ul>
         </div>
     </header>
+    <main id='color'>
+        <h1>color</h1>
+        <div class='color-buttons'>
+            <div id='random-button'>random</div>
+            <div id='reset-button'>reset</div>
+        </div>
+        <section>
+            <div class='color-input'>
+                <div 
+                    name="text color" 
+                    id="text-color"
+                    class="text-color color">
+                    text
+                </div>
+            </div>
+            <div class='color-input'>
+                <div 
+                    name="accent color" 
+                    id="accent-color"
+                    class="accent-color color">
+                    accent
+                </div>
+            </div>
+            <div class='color-input'>
+                <div 
+                    name="background color" 
+                    id="background-color"
+                    class="background-color color">
+                    background
+                </div>
+            </div>
+            <div class='color-input'>
+                <div 
+                    name="highlight color" 
+                    id="highlight-color"
+                    class="highlight-color color">
+                    highlight
+                </div>
+            </div>
+
+        </section> 
+    </main>
     <main id='projects'>
         <h1>projects</h1>
         <section class='slides' >
@@ -80,7 +119,7 @@
             <div class="project">
                 <header>
                     <h3 class='title pink'>Spellcaster</h3>
-                    <h3><a href="https://simondebevoise.com/Spellcaster">live</a>  <a href="https://github.com/debevoise/Spellcaster">source</a></h3>
+                    <h3><a href="https://v1.simondebevoise.com/Spellcaster">live</a>  <a href="https://github.com/debevoise/Spellcaster">source</a></h3>
                     
                 </header>
                 <img src="images/spellcaster.png" alt="spellcaster">
@@ -121,7 +160,7 @@
                     <h2>Software Engineer</h2>
                     <p>July 2020 - present</p>
                     <p><a class="fg-accent-color" href="https://principlesofchaos.org/">Chaos engineer</a> on Bloomberg's new Resilience Engineering team. Building a set of tools for developers to easily build custom chaos experiments and measure the resiliency of their systems.</p>
-                    <p>Still figuring out how to use a Jira board. Learning technologies like Kafka, Cassandra, Flask, Node and React. Building code features from frontend to backend on a team of three.</p>
+                    <p>Still figuring out how to use a Jira board. Learning technologies like Kafka, Cassandra, Flask, TypeScript and Node. Building code features from frontend to backend on a team of three.</p>
                 </div>
             </div>
             <div class='split job-info'>
@@ -142,7 +181,7 @@
                     <h1>The NoMad Restaurant</h1>
                     <h2>Assistant Server</h2>
                     <p>Sep 2018 - August 2019</p>
-                    <p>Managed a section of 40 diners per evening at high volume, Michelin-starred restaurant. </p><p>Trained new team members on the restaurant’s culture and service standards. </p><p>Took initiate on busy nights and maintained communication between the kitchen and server teams.</p>
+                    <p>Managed a section of 40 diners per evening at high volume, Michelin-starred restaurant. </p><p>Trained new team members on the restaurant’s culture and service standards. </p><p>Took initiative on busy nights and maintained communication between the kitchen and server teams.</p>
                 </div>
             </div>
         </section>
@@ -245,7 +284,7 @@ const mapDispatchProps = dispatch => ({
             </pre>
             <pre class='code-block'>
                 <code class='language-javascript'>
-// Express.js
+// Node.js
 
 router.get('/:id', (req, res) => {
     const { id } = req.params;
@@ -264,9 +303,9 @@ router.get('/:id', (req, res) => {
 
 .css-example {
     background-color: var(--highlight-color);
-    box-shadow: -10px -10px var(--text-color);
-    border: 2px double var(--accent-color);
-    border-radius: 50px;
+    box-shadow: -10px -10px 5px var(--text-color);
+    border: 10px double var(--accent-color);
+    border-radius: 20px;
 }</code>
             </pre>
             <pre class='code-block'>
@@ -288,9 +327,12 @@ router.get('/:id', (req, res) => {
 
 * SQL (PostgreSQL, SQLite) 
 * NoSQL (Cassandra, MongoDB)
-* Node.js, Flask
+* Flask, Express.js
+* Kafka
 * Git, Github 
-* Max/MSP, Pure Data</code>
+* Max/MSP, Pure Data
+
+~ One day, a C++ wizard...</code>
             </pre>
         </section>
         
@@ -314,67 +356,7 @@ router.get('/:id', (req, res) => {
             
         </section>
     </main>
-    <!-- <main id='typing'>
-        <h1>typing</h1>
-        <div id="typing-area">
-            <div id="text-display">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem, magni ratione, praesentium cum nulla illum totam placeat veniam aspernatur ab sunt accusamus quisquam soluta! Culpa nesciunt maxime iure ea!
-			</div>
-            <div class="bar">
-				<h2 id='info-box'>1:00</h2>
-                <input id="input-field" type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" tabindex="1"/>
-                <button id="redo-button" onclick="" tabindex="2">redo</button>
-            </div>
-        </div>
-    </main> -->
-    <main id='color'>
-        <h1>color</h1>
-        <div class='color-buttons'>
-            <div id='random-button'>random</div>
-            <div id='reset-button'>reset</div>
-        </div>
-        <section>
-            <div class='color-input'>
-                <div 
-                    type="color" 
-                    name="text color" 
-                    id="text-color"
-                    class="text-color color"
-                    value="#fd9800">
-                </div>
-            </div>
-            <div class='color-input'>
-                <div 
-                    type="color" 
-                    name="accent color" 
-                    id="accent-color"
-                    class="accent-color color"
-                    value="#ff69b4">
-                </div>
-                
-            </div>
-            <div class='color-input'>
-                <div 
-                    type="color" 
-                    name="background color" 
-                    id="background-color"
-                    class="background-color color"
-                    value="#000000">
-                    
-                </div>
-            </div>
-            <div class='color-input'>
-                <div 
-                    type="color" 
-                    name="highlight color" 
-                    id="highlight-color"
-                    class="highlight-color color"
-                    value="#800080">
-                </div>
-            </div>
-
-        </section> 
-    </main>
+    
     <footer>
         Site designed by Simon DeBevoise, all rights reserved. 
     </footer>

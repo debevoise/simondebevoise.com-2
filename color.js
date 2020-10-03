@@ -4,7 +4,7 @@ const colors = [
     'background-color',
     'accent-color',
     'text-color',
-    'highlight-color'
+    'highlight-color',
 ]
 
 const defaults = {
@@ -14,10 +14,10 @@ const defaults = {
     'highlight-color':      "#800080",
 }
 
-function setColor(name, value, store=true) {
+function setColor(name, value) {
     const cssVar = `--${name}`;
     root.style.setProperty(cssVar, value);
-    if (store)  localStorage.setItem(name, value);
+    localStorage.setItem(name, value);
 }
 
 function randomize() {
@@ -32,7 +32,7 @@ function randomColor() {
 }
 
 function reset() {
-    colors.forEach(color => setColor(color, defaults[color]))
+    colors.forEach(color => setColor(color, defaults[color]));
 }
 
 function getUserColor(color) {
@@ -44,11 +44,9 @@ function main() {
     colors.forEach(color => {
         // Set from local storage
         setColor(color, getUserColor(color));
-
         const div = document.getElementById(color);
         div.addEventListener("click", () => setColor(color, randomColor()));
     })
-
     
     // Initialize buttons
     const resetButton = document.getElementById('reset-button');
