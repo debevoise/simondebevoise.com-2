@@ -10,7 +10,7 @@
     --highlight-color: #000000;
     --background-color: #000000; 
     --invert-color: 180;
-    --code-font: 'Roboto Mono', 'Courier New', Courier, monospace;
+    --code-font: 'Fira Code', 'Courier New', Courier, monospace;
     --sans-font: Helvetica, Arial, sans-serif;
     --serif-font: 'CMU Serif', Georgia, 'Times New Roman', Times, serif;;
 }
@@ -281,7 +281,7 @@ li:hover {
 }
 
 #coding {
-    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    font-family: var(--code-font);
 }
 
 .max-width-900 {
@@ -497,14 +497,16 @@ button:hover {
 
 .color-buttons {
     display: flex;
-    justify-content: space-between;
-    width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
 }
 
 .color-buttons > div {
     font-size: 20px;
     border: 1px solid var(--accent-color);
     padding: 10px;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -533,4 +535,8 @@ button:hover {
     box-shadow: -10px -10px 5px var(--text-color);
     border: 10px double var(--accent-color);
     border-radius: 20px;
+}
+
+code {
+    font-family: var(--code-font) !important;
 }
