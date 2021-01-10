@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
     <link href="themes/prism-dark.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
     <title>slime</title>
 </head>
 <body>
@@ -25,13 +27,12 @@
             </ul>
         </nav>
     </header>
-
     <section id='about' class='intro max-width-900'>
-        <img class='my-face' src="images/green.jpg" alt="Specs pass">
+        <img class='my-face' src="images/portrait.jpg" alt="Noodle doodle">
         <div class='about'>
             <h1>Simon DeBevoise</h1>
-            <p>Currently building a pedal steel guitar with Pure Data on a Raspberry Pi.</p>
-            <p>Find me biking in NYC and on the Blue Ridge Mountains, jamming in Bushwick warehouses, learning actual pedal steel guitar.</p>
+            <p>Find me biking all over New York, jamming in a musty LIC basement, learning to play pedal steel guitar during a pandemic.</p>
+            <p>I'm a musician turned anthropologist turned software engineer. I love playing chess, <a class="fg-accent-color" href="#music">listening to music</a>, and cooking delicious beans. Talk to me about <a class="fg-accent-color" href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"> Gödel, Escher, Bach</a>.</p>
             <p>Concocting chaos at Bloomberg LP.</p>
         </div>
     </section>
@@ -60,7 +61,7 @@
     </header>
     <main id='color'>
         <h1>color</h1>
-        <div class='color-buttons'>
+        <div class='color-buttons' id='color-buttons'>
             <div id='random-button'>random</div>
             <div id='reset-button'>reset</div>
         </div>
@@ -97,7 +98,6 @@
                     highlight
                 </div>
             </div>
-
         </section> 
     </main>
     <main id='projects'>
@@ -123,7 +123,7 @@
                     
                 </header>
                 <img src="images/spellcaster.png" alt="spellcaster">
-                <p>Cast spells with words! In Spellcaster, a user can chain sequences of keywords that effects the properties of a 'spell'. These spells move about and effect a grid of cells that contain either a character or nothing at all. </p><p>The spell 'upfooupleftredbar' contains the keywords 'up', 'up', 'left', 'red', which determines that the spell will have a red background and will move up 2 spaces and left 1 space per animation frame. </p><p>By pressing space, a user releases that spell and can start a new one. </p><p>Easter eggs include a Typing Test mode that calculates users' typed words per minute and a variation on Snake.</p>
+                <p>Cast spells with words! In Spellcaster, a user can chain sequences of keywords that effects the properties of a 'spell'. These spells move about and effect a grid of cells that contain either a character or nothing at all. </p><p>The spell 'upfooupleftredbar' contains the keywords 'up', 'up', 'left', 'red', which determines that the spell will have a red background and will move up 2 spaces and left 1 space per animation frame. By pressing space, a user releases that spell and can start a new one. </p><p>Easter eggs include a Typing Test mode that calculates users' typed words per minute and a colorful take on Snake.</p>
             </div>
             <div class="project">
                 <header>
@@ -131,9 +131,9 @@
                     <h3> <a href="https://splat-music.herokuapp.com/">live</a>  <a href="https://www.github.com/debevoise/Splat">source</a> </h3>
                 </header>
                 <img src="images/splat.png" alt="splat drum sequencer">
-                <p>Splat is an interactive, easy-to-use audio sampler and sequencer. Users can create beats by simply pressing keys or clicking. </p><p>Customize your sound by selecting one of Splat's many diverse sound banks. The sequencer allows users to layer samples over a four measure loop to dynamically create songs.
-                </p><p>
-                    Built on a MongoDB, Express.js, React / Redux, and Node.js (MERN) stack. Splat uses Tone.js to control swing and ensure sample-accurate timing for audio-sequencer playback.</p>
+                <p>Splat is an interactive, easy-to-use audio sampler and sequencer. Users can create beats by simply pressing keys or clicking.</p>
+                <p>Customize your sound by selecting one of Splat's many diverse sound banks. The sequencer allows users to layer samples over a four measure loop to dynamically create songs.</p>
+                <p>Built on a MongoDB, Express.js, React / Redux, and Node.js (MERN) stack. Splat uses Tone.js to control swing and ensure sample-accurate timing for audio-sequencer playback.</p>
             </div>
             <div class="project">
                 <header>
@@ -141,9 +141,8 @@
                     <h3><a href="http://portefeuille-stocks.herokuapp.com/">live</a>  <a href="https://github.com/debevoise/Portefeuille">source</a></h3>
                 </header>
                 <img src="images/portefeuille.png" alt="portefeuille">
-                <p>A stock portfolio web app. Sign up to Portefeuille to buy stocks with fake money, keep track of your transactions, and follow the ups and downs of market prices. 
-                    </p><p>
-                    API requests to IEX Cloud provide real-time market data. Built on a Ruby on Rails, Postgres, React / Redux stack for the NYC Tech Talent Pipeline coding challenge.</p>
+                <p>A stock portfolio web app. Sign up to Portefeuille to buy stocks with fake money, keep track of your transactions, and follow the ups and downs of market prices.</p>
+                <p>API requests to IEX Cloud provide real-time market data. Built on a Ruby on Rails, PostgreSQL, React / Redux stack and a winning submission to the <a href="https://www.techtalentpipeline.nyc/" class="fg-accent-color">NYC Tech Talent Pipeline</a> coding challenge.</p>
             </div>
         </section>
     </main>
@@ -153,14 +152,13 @@
             <div class='split job-info'>
                 <div class='left'>
                     <img class='flip logo' src="images/bloomberg.png" alt="bloomberg">
-                    
                 </div>
                 <div class='right'>
                     <h1>Resilience Engineering</h1>
                     <h2>Software Engineer</h2>
                     <p>July 2020 - present</p>
-                    <p><a class="fg-accent-color" href="https://principlesofchaos.org/">Chaos engineer</a> on Bloomberg's new Resilience Engineering team. Building a set of tools for developers to easily build custom chaos experiments and measure the resiliency of their systems.</p>
-                    <p>Still figuring out how to use a Jira board. Learning technologies like Kafka, Cassandra, Flask, TypeScript and Node. Building code features from frontend to backend on a team of three.</p>
+                    <p><a class="fg-accent-color" href="https://principlesofchaos.org/">Chaos engineer</a> on Bloomberg's new Resilience Engineering team. Building a framework for developers to easily build custom chaos experiments and measure the resiliency of their systems.</p>
+                    <p>Using technologies like Kafka, Cassandra, Flask, TypeScript and Node. Building code features and microservices from frontend to backend on a team of four.</p>
                 </div>
             </div>
             <div class='split job-info'>
@@ -170,7 +168,9 @@
                 <div class='right'>
                     <h2>Tech Lead</h2>
                     <p>March 2020 - June 2020</p>
-                    <p>Led a team of four volunteer software engineers to build out a platform to help connect families affected by COVID-19 to donors. </p><p> Oversaw Git workflow with frequent code reviews and implemented security protocols across the stack to ensure our site was secure and bug free for our June launch. </p><p>Architected Ruby on Rails API with token-based authentication and ensured backend data compliance with the site’s legal requirements.</p>
+                    <p>Founding engineer and tech lead to a team of four volunteer software engineers at <a class="fg-accent-color" href="https://thegivinggrape.org/">The Giving Grape</a>, a 501(c)(3) non-profit that has built a network of hundreds of donors and distributed support to families impacted by the pandemic.
+                    <p> Oversaw Git workflow with frequent code reviews and implemented security protocols across the stack to ensure our site was secure and bug free for our June launch.</p>
+                    <p>Architected Ruby on Rails API with token-based authentication and ensured backend data compliance with the site’s legal requirements.</p>
                 </div>
             </div>
             <div class='split job-info'>
@@ -211,16 +211,20 @@ function setColor(name, value, store=true) {
                 <code class='language-python'>
 # Python
 
-def two_sum(nums, k):
-    lookup = {}
+def indices(string, pattern):
+    idx = 0
+    while True:
+        try:
+            yield (idx := string.index(pattern, idx))
+            idx += 1
+        except ValueError:
+            break
 
-    for i, num in enumerate(nums):
-        comp = k - num
-
-        if comp in lookup: 
-            return [lookup[comp], i]
-
-        lookup[num] = i</code>
+def rule3(theorem):
+    return (
+        theorem[:idx] + U + theorem[idx+3:] 
+        for idx in indices(theorem, III)
+        )</code>
             </pre>
             <pre class='code-block'>
                 <code class='language-ruby'>
@@ -349,16 +353,31 @@ router.get('/:id', (req, res) => {
             
             <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/236862664&color=%23ff69b4&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             
+
             <iframe src="https://open.spotify.com/embed/playlist/0qPByR9GtA9kzB48d0yf64" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
             <iframe src="https://open.spotify.com/embed/playlist/6lFOnXnkwapw3vehvpzZT7"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-            
+            <iframe src="https://open.spotify.com/embed/playlist/4BUWoftVqWyWTSeDpAusok"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            <iframe src="https://open.spotify.com/embed/playlist/0KyRSoSwrR48oR35RMa8Ug" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </section>
+        <!-- <section>
+            <h2>Blimp Tunes for the Masses and other playlists</h2>
+            <ul>
+                <li><a href="https://open.spotify.com/playlist/3qe8FVlWRmZJKYoKE0gPPE?si=mXD7GQ2zTFmF36tv27Fx0w">blimp tunes for the masses</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                
+            </ul>
+        </section> -->
     </main>
-    
     <footer>
-        Site designed by Simon DeBevoise, all rights reserved. 
+        Designed by Simon DeBevoise, all rights reserved. This site uses LocalStorage to save color choices.
     </footer>
 	<script src="prism.js"></script>
     <script src="color.js"></script>
